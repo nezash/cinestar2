@@ -1,7 +1,7 @@
 const getPeliculas = async()=>{
 
-    /*const idx = (new URLSearchParams) */
-    const data = await fetch(`http://localhost/cines/peliculas/cartelera`);
+    const idx = (new URLSearchParams(window.location.search)).get(`idx`);
+    const data = await fetch(`http://localhost/cine/peliculas/${idx}`);
 
     if (data.status==200) {
         const peliculas = await data.json();
@@ -14,7 +14,7 @@ const getPeliculas = async()=>{
                 <div class="datos-pelicula">
                     <h2>${pelicula.Titulo}</h2><br/>
                     <p>${pelicula.Sinopsis}</p>
-                    <p>${pelicula.Sinopsis}</p>
+                    <p>${pelicula.Link}</p>
                     <br/>
                        <div class="boton-pelicula"> 
                            <a href="http://www.cinestar.com.pe/cartelera/pelicula/Locos-de-Amor-2" >

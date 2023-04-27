@@ -1,5 +1,5 @@
 const getCines = async()=>{
-    const data = await fetch(`http://localhost/cines/cines`);
+    const data = await fetch(`http://localhost/cine/cines`);
 
     if (data.status==200) {
         const cines = await data.json();
