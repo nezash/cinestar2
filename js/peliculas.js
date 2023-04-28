@@ -17,12 +17,12 @@ const getPeliculas = async()=>{
                     <p>${pelicula.Link}</p>
                     <br/>
                        <div class="boton-pelicula"> 
-                           <a href="http://www.cinestar.com.pe/cartelera/pelicula/Locos-de-Amor-2" >
+                           <a href="pelicula.html?id=${pelicula.id}" >
                                <img src="img/varios/btn-mas-info.jpg" width="120" height="30" alt="Ver info"/>
                            </a>
                        </div>
                        <div class="boton-pelicula"> 
-                           <a href="http://www.cinestar.com.pe/popups/trailer/v3fspveODBI" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" >
+                           <a href="https://www.youtube.com/v/${pelicula.Link}" target=_blank  onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" >
                                <img src="img/varios/btn-trailer.jpg" width="120" height="30" alt="Ver trailer"/>
                            </a>
                     </div> 
